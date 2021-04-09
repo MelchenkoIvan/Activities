@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./app/layout/Styles.css";
-import reportWebVitals from "./reportWebVitals";
+import reportWebVitals from "./reportWebVitals"; 
+import 'react-calendar/dist/Calendar.css'
 import "semantic-ui-css/semantic.min.css";
 import App from "./app/layout/App";
 import { store, StoreContext } from "./app/stores/store";
