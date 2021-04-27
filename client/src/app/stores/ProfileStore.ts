@@ -1,5 +1,4 @@
 import { makeAutoObservable, reaction, runInAction } from "mobx";
-import React from "react";
 import agent from "../api/agent";
 import { Photo, Profile, UserActivity } from "../Models/profile";
 import { store } from "./store";
