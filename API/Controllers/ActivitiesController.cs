@@ -1,4 +1,5 @@
-﻿using Application.Activities;
+﻿using API.DtoValidator;
+using Application.Activities;
 using Application.Core;
 using Domain;
 using Microsoft.AspNetCore.Authorization;
@@ -15,8 +16,13 @@ namespace API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetActivities([FromQuery] ActivityParams param)
         {
-            return HandlePagedResult(await Mediator.Send(new List.Query { Params = param }));
-
+            ValidateDto vd = new ValidateDto();
+            bool res = vd.ActivityParamsDto(param);
+            if(res)
+            {
+                return HandlePagedResult(await Mediator.Send(new List.Query { Params = param }));
+            };
+            return StatusCode(500);
         }
 
         [HttpGet("{id}")]
