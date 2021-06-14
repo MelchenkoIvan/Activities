@@ -9,7 +9,9 @@ namespace API.Controllers
 {
     public class FollowController : BaseApiController
     {
-
+        /** 
+* Controller for manipulations with friend request`s
+*/
         [HttpPost("{username}")]
         public async Task<IActionResult>Follow(string username)
         {

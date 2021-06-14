@@ -1,0 +1,67 @@
+\hypertarget{class_a_p_i_1_1_controllers_1_1_account_controller}{}\doxysection{API.\+Controllers.\+Account\+Controller Class Reference}
+\label{class_a_p_i_1_1_controllers_1_1_account_controller}\index{API.Controllers.AccountController@{API.Controllers.AccountController}}
+Inheritance diagram for API.\+Controllers.\+Account\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_a_p_i_1_1_controllers_1_1_account_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_p_i_1_1_controllers_1_1_account_controller_a73997bd09ce565056aa21e0d4d5b0de6}\label{class_a_p_i_1_1_controllers_1_1_account_controller_a73997bd09ce565056aa21e0d4d5b0de6}} 
+{\bfseries Account\+Controller} (User\+Manager$<$ \mbox{\hyperlink{class_domain_1_1_app_user}{App\+User}} $>$ user\+Manager, Sign\+In\+Manager$<$ \mbox{\hyperlink{class_domain_1_1_app_user}{App\+User}} $>$ sign\+In\+Manager, \mbox{\hyperlink{class_a_p_i_1_1_services_1_1_token_service}{Token\+Service}} token\+Service)
+\item 
+async Task$<$ Action\+Result$<$ \mbox{\hyperlink{class_a_p_i_1_1_d_t_os_1_1_user_dto}{User\+Dto}} $>$ $>$ \mbox{\hyperlink{class_a_p_i_1_1_controllers_1_1_account_controller_a72b7170a8d1dd07c76e6f1592235802f}{Login}} (\mbox{\hyperlink{class_a_p_i_1_1_d_t_os_1_1_login_dto}{Login\+Dto}} login\+Dto)
+\item 
+async Task$<$ Action\+Result$<$ \mbox{\hyperlink{class_a_p_i_1_1_d_t_os_1_1_user_dto}{User\+Dto}} $>$ $>$ \mbox{\hyperlink{class_a_p_i_1_1_controllers_1_1_account_controller_a61036f89eb55b74042223ec119bdc94a}{Register}} (\mbox{\hyperlink{class_a_p_i_1_1_d_t_os_1_1_register_dto}{Register\+Dto}} register\+Dto)
+\item 
+\mbox{\Hypertarget{class_a_p_i_1_1_controllers_1_1_account_controller_a21405f5d9801478010496457152537fa}\label{class_a_p_i_1_1_controllers_1_1_account_controller_a21405f5d9801478010496457152537fa}} 
+async Task$<$ Action\+Result$<$ \mbox{\hyperlink{class_a_p_i_1_1_d_t_os_1_1_user_dto}{User\+Dto}} $>$ $>$ {\bfseries Get\+Current\+User} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_p_i_1_1_controllers_1_1_account_controller_a9a00b1a212e865a687b8debb2415de6a}\label{class_a_p_i_1_1_controllers_1_1_account_controller_a9a00b1a212e865a687b8debb2415de6a}} 
+\mbox{\hyperlink{class_a_p_i_1_1_d_t_os_1_1_user_dto}{User\+Dto}} {\bfseries Create\+User\+Object} (\mbox{\hyperlink{class_domain_1_1_app_user}{App\+User}} user)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly User\+Manager$<$ \mbox{\hyperlink{class_domain_1_1_app_user}{App\+User}} $>$ \mbox{\hyperlink{class_a_p_i_1_1_controllers_1_1_account_controller_a145ca3598ce00fce3fcb51e67a731687}{\+\_\+user\+Manager}}
+\item 
+\mbox{\Hypertarget{class_a_p_i_1_1_controllers_1_1_account_controller_a66dbb675eb8cbdb5272e152fca7b20c9}\label{class_a_p_i_1_1_controllers_1_1_account_controller_a66dbb675eb8cbdb5272e152fca7b20c9}} 
+readonly Sign\+In\+Manager$<$ \mbox{\hyperlink{class_domain_1_1_app_user}{App\+User}} $>$ {\bfseries \+\_\+sign\+In\+Manager}
+\item 
+\mbox{\Hypertarget{class_a_p_i_1_1_controllers_1_1_account_controller_ae960b94ec318650c940cdf9c44566266}\label{class_a_p_i_1_1_controllers_1_1_account_controller_ae960b94ec318650c940cdf9c44566266}} 
+readonly \mbox{\hyperlink{class_a_p_i_1_1_services_1_1_token_service}{Token\+Service}} {\bfseries \+\_\+token\+Service}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_a_p_i_1_1_controllers_1_1_account_controller_a72b7170a8d1dd07c76e6f1592235802f}\label{class_a_p_i_1_1_controllers_1_1_account_controller_a72b7170a8d1dd07c76e6f1592235802f}} 
+\index{API.Controllers.AccountController@{API.Controllers.AccountController}!Login@{Login}}
+\index{Login@{Login}!API.Controllers.AccountController@{API.Controllers.AccountController}}
+\doxysubsubsection{\texorpdfstring{Login()}{Login()}}
+{\footnotesize\ttfamily async Task$<$Action\+Result$<$\mbox{\hyperlink{class_a_p_i_1_1_d_t_os_1_1_user_dto}{User\+Dto}}$>$ $>$ API.\+Controllers.\+Account\+Controller.\+Login (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_p_i_1_1_d_t_os_1_1_login_dto}{Login\+Dto}}}]{login\+Dto }\end{DoxyParamCaption})}
+
+LOGIN COMMAND \mbox{\Hypertarget{class_a_p_i_1_1_controllers_1_1_account_controller_a61036f89eb55b74042223ec119bdc94a}\label{class_a_p_i_1_1_controllers_1_1_account_controller_a61036f89eb55b74042223ec119bdc94a}} 
+\index{API.Controllers.AccountController@{API.Controllers.AccountController}!Register@{Register}}
+\index{Register@{Register}!API.Controllers.AccountController@{API.Controllers.AccountController}}
+\doxysubsubsection{\texorpdfstring{Register()}{Register()}}
+{\footnotesize\ttfamily async Task$<$Action\+Result$<$\mbox{\hyperlink{class_a_p_i_1_1_d_t_os_1_1_user_dto}{User\+Dto}}$>$ $>$ API.\+Controllers.\+Account\+Controller.\+Register (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_p_i_1_1_d_t_os_1_1_register_dto}{Register\+Dto}}}]{register\+Dto }\end{DoxyParamCaption})}
+
+REGISTER COMMAND 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_a_p_i_1_1_controllers_1_1_account_controller_a145ca3598ce00fce3fcb51e67a731687}\label{class_a_p_i_1_1_controllers_1_1_account_controller_a145ca3598ce00fce3fcb51e67a731687}} 
+\index{API.Controllers.AccountController@{API.Controllers.AccountController}!\_userManager@{\_userManager}}
+\index{\_userManager@{\_userManager}!API.Controllers.AccountController@{API.Controllers.AccountController}}
+\doxysubsubsection{\texorpdfstring{\_userManager}{\_userManager}}
+{\footnotesize\ttfamily readonly User\+Manager$<$\mbox{\hyperlink{class_domain_1_1_app_user}{App\+User}}$>$ API.\+Controllers.\+Account\+Controller.\+\_\+user\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+Controller for login and register operations 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/vladh/source/repos/\+Activities/\+API/\+Controllers/Account\+Controller.\+cs\end{DoxyCompactItemize}
