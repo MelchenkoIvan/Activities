@@ -5,6 +5,9 @@ namespace API.Controllers
 {
     public class BuggyController : BaseApiController
     {
+        /** 
+* Errors Controller for debugging purposes
+*/
         [HttpGet("not-found")]
         public ActionResult GetNotFound()
         {

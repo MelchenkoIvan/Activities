@@ -17,18 +17,28 @@ namespace API.Controllers
     [Route("api/[controller]")]
     public class AccountController : ControllerBase
     {
+        /** 
+    * Controller for login and register operations 
+    * 
+    */
+
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
         private readonly TokenService _tokenService;
 
-        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager,TokenService tokenService)
+        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, TokenService tokenService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _tokenService = tokenService;
         }
-        
 
+
+
+
+        /** 
+    * LOGIN COMMAND
+    */
 
         [HttpPost("login")]
         public async Task<ActionResult<UserDto>> Login(LoginDto loginDto)
@@ -51,18 +61,23 @@ namespace API.Controllers
             }
             return Unauthorized();
         }
+
+        /** 
+        * REGISTER COMMAND
+        */
+
         [HttpPost("register")]
-        public async Task<ActionResult<UserDto>> Register( RegisterDto registerDto)
+        public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto)
         {
             if (await _userManager.Users.AnyAsync(x => x.Email == registerDto.Email))
             {
-                ModelState.AddModelError("email","Email taken");
+                ModelState.AddModelError("email", "Email taken");
                 return ValidationProblem();
             }
             if (await _userManager.Users.AnyAsync(x => x.UserName == registerDto.Username))
-            {   
-                ModelState.AddModelError("username","Username taken");
-                return ValidationProblem(); 
+            {
+                ModelState.AddModelError("username", "Username taken");
+                return ValidationProblem();
             }
             ValidateDto vd = new ValidateDto();
             bool res = vd.validateRegostrDto(registerDto);
